@@ -1,0 +1,162 @@
+/**
+ * @Description:组件样式修改
+ * @author:ybt
+ * @Date:2020/6/11
+ */
+// input 输入框样式
+.el-input input{
+    height: 34px;
+    line-height: 34px;
+}
+
+// 搜索区域按钮样式
+.search-area{
+    // input 输入框样式
+    .el-input input{
+        height: 30px;
+        line-height: 30px;
+    }
+    .search-button .el-button--small, .el-button--small.is-round{
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+// 列表样式
+.table-list{
+    flex: 1;
+    position: relative; // 添加定位是为了解决flex布局下el-table的自适应问题
+    .el-table{
+        position: absolute;
+        &::before{
+            //height: 0 !important;
+            // table小屏横线问题
+            z-index: inherit;
+        }
+        // 表头样式
+        thead{
+            height: 40px !important;
+            color: #606266 !important;
+            font-size: 14px;
+            font-weight: 500 !important;
+            tr th{
+                padding: 5px 0 !important;
+                background-color: rgba(242,246,252,1) !important;
+            }
+        }
+        tbody{
+            tr td{
+                padding: 5px 0 !important;
+            }
+        }
+        .el-button--small, .el-button--small.is-round{
+            height: 25px !important;
+            padding: 4px 6px !important;
+            i{
+                font-weight: bold !important;
+            }
+        }
+        // 链接字段样式
+        .link{
+            color: #409EFF;
+            cursor: pointer;
+            &:hover{
+                color: #0000ff;
+            }
+        }
+    }
+}
+/*分页样式*/
+.pagination{
+    border-top: 1px solid #ddd;
+    .no-shadow{
+        text-align: right;
+        padding: 10px;
+        // 去除input框红色阴影（火狐）
+        .el-pagination__total,.el-pagination__sizes{
+            float: left;
+        }
+        input{
+            box-shadow: none
+        }
+    }
+}
+
+
+
+
+// 分页input输入框样式
+.el-pagination__jump .el-input input{
+  height: 26px !important;
+}
+// button搜索按钮样式
+.search-condition .el-button.el-button--primary.el-button--medium{
+    border: 1px solid @color-blue;
+    background-color: @color-blue;
+    font-size: 14px !important;
+    width: 80px !important;
+    height: 34px !important;
+    margin-left: 10px !important;
+}
+.search-condition .el-button.el-button--primary.el-button--medium:hover{
+    border: 1px solid @hover-blue !important;
+    background-color: @hover-blue !important;
+}
+.dialog-footer .el-button.el-button--primary.el-button--medium:hover{
+    border: 1px solid @hover-blue !important;
+    background-color: @hover-blue !important;
+}
+// button表格按钮样式
+.cell .el-button{
+    padding:0!important;
+}
+// 日期插件样式
+.el-input__icon{
+    height: 34px !important;
+    line-height: 34px !important;
+}
+
+/*confirm弹窗的确定按钮样式修改红色*/
+.confirm-button{
+  background: @color-red !important;
+  border-color: @color-red !important;
+}
+.confirm-button1{
+    background: #67C23A !important;
+    border-color: #67C23A !important;
+  }
+.el-popover{
+  padding: 0 !important;
+}
+// 弹出层样式
+.el-dialog{
+    // 弹出层头部样式
+    .el-dialog__header{
+        height: 50px !important;
+        line-height: 50px !important;
+        padding: 0 20px !important;
+        border-bottom: 1px solid #E3E7ED;
+        font-size: 16px;
+        color: #303133;
+        font-weight:600;
+    }
+    // 弹出层内容样式
+    .el-dialog__body{
+        padding: 0 !important;
+    }
+    // 弹出层底部按钮
+    .dialog-footer {
+        text-align: center;
+        .el-button{
+            font-size: 14px !important;
+            width: 100px !important;
+            height: 40px !important;
+        }
+        .el-button.el-button--primary.el-button--medium{
+            border: 1px solid @color-blue;
+            background-color: @color-blue;
+        }
+    }
+}
+
+

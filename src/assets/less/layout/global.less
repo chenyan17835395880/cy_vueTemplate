@@ -1,0 +1,99 @@
+/****** 主体内容样式 —— 此部分用于列表页面代码复用 ******/
+// 搜索条件区域
+.search-area{
+    min-width: 940px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+    padding: 10px 10px 0 10px;
+    span{
+        display: inline-block;
+    }
+    .item-box{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        .item-name{
+            width: 66px;
+            text-align: right;
+        }
+        .item-value{
+            width: 180px;
+            .el-input,.el-select{
+                width: 100%;
+            }
+        }
+    }
+    .item-week{
+        height: 30px;
+        line-height: 30px;
+        border-radius: 4px;
+        border: 1px solid #DCDFE6;
+        padding: 0 5px;
+        margin: 0 5px;
+    }
+    .line-box{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        .line-name{
+            width: 66px;
+            text-align: right;
+        }
+        .line-value{
+            .el-select{
+                width: 180px;
+            }
+            .el-select + .el-select{
+                margin-left: 3px;
+            }
+        }
+    }
+    .search-button{
+        margin-bottom: 10px;
+        i{
+            font-weight: bold !important;
+        }
+    }
+}
+// 主要内容区域
+.main-content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+    padding: 10px;
+    .function-button{
+        margin-bottom:10px;
+        i{
+            font-weight: bold !important;
+        }
+    }
+}
+
+// 隐藏【百度地图】左下角logo
+.BMap_cpyCtrl {
+    display: none;
+}
+.anchorBL {
+    display: none;
+}
+
+// 隐藏【高德地图】左下角logo
+.amap-logo {
+    right: 0 !important;
+    left: auto !important;
+    display: none !important;
+}
+.amap-copyright {
+    right: 70px !important;
+    left: auto !important;
+    opacity:0 !important;
+}
+
